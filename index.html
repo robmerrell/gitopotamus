@@ -4,75 +4,57 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-	<title>robmerrell/gitopotamus @ GitHub</title>
-	
-	<style type="text/css">
-		body {
-  		margin-top: 1.0em;
-  		background-color: #1d0049;
-		  font-family: "Helvetica,Arial,FreeSans"; 
-  		color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-		h1 { font-size: 3.8em; color: #e2ffb6; margin-bottom: 3px; }
-		h1 .small { font-size: 0.4em; }
-		h1 a { text-decoration: none }
-		h2 { font-size: 1.5em; color: #e2ffb6; }
-    h3 { text-align: center; color: #e2ffb6; }
-    a { color: #e2ffb6; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-		pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-	</style>
-	
+	<title>Gitopotamus</title>
+	<link rel="stylesheet" href="css/gitopotamus.css" type="text/css" />
 </head>
 
 <body>
+  <div id="header">
+    <h1>Gitopotamus</h1>
+  </div>
+  
+  
   <a href="http://github.com/robmerrell/gitopotamus"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+
   
   <div id="container">
-
-    <div class="download">
-      <a href="http://github.com/robmerrell/gitopotamus/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/robmerrell/gitopotamus/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+    <img src="images/pre.jpg" style="float: left;" />
+    
+    <div id="features">
+      <h2>GitHub client for Palm webOS</h2>
+      <ul>
+        <li>Be the ultimate nerd by perusing your source code while on the go</li>
+        <li>Keep tabs on your public, private and watched repositories</li>
+        <li>Discover and follow new repositories</li>
+        <li>Manage your user profile</li>
+      </ul>
     </div>
-      
-    <h1><a href="http://github.com/robmerrell/gitopotamus">gitopotamus</a> 
-      <span class="small">by <a href="http://github.com/robmerrell">robmerrell</a></span></h1>
-
-    <div class="description">
-      GitHub client for palm webOS
+    
+    <div style="clear: both;">
+      <hr/>
     </div>
-
-    <h2>Contact</h2>
-<p>Rob Merrell (robmerrell@trackera.com)<br/>      </p>
-
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/robmerrell/gitopotamus/zipball/master">zip</a> or
-      <a href="http://github.com/robmerrell/gitopotamus/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/robmerrell/gitopotamus</pre>
-    </p>
+    
+    <div id="development_plan">
+      <h2>The development plan</h2>
       
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/robmerrell/gitopotamus">robmerrell/gitopotamus</a>
+      <div class="stage">
+        <div class="stage_name">Stage 1</div>
+        <img src="images/mockups/repositories.png" style="float: left; padding-right: 20px;" />
+        <div class="description">
+          <p>This is going to be the "home" page for the application.  It shows all of the private, public and watched
+            repositories for the authenticated user.  The page header at the top will have an icon on the right side
+            used to navigation between the different sections of the app.</p>
+          <p>Each repository will have a number at the right side indicating the number of commits made since it was
+            last viewed.  Very similar to how an RSS feed reader works.  Also similar to an RSS reader is the
+            capability to "mark all as read", which you can see is a command menu option in the bottom left.</p>
+          <p>Each repository will have an icon indicating wether it is public or private.  Tapping on a repository listing.
+            Will take you to the Repository section of the app.<p>
+        </div>
+      </div>
+      <div style="clear: both;"></div>
     </div>
     
   </div>
-
   
 </body>
 </html>

@@ -1,0 +1,65 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+	background-color: #ffffff;
+  font-family: arial,helvetica; 
+	color: #444444;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 1.5em;
+}
+
+h2 {
+  color: #3C468C;
+  font-size: 1.3em;
+}
+
+p {
+  margin: 10px;
+}
+
+#header {
+  background-color: #333333;
+  border-bottom: 2px solid #afafaf;
+  height: 45px;
+  line-height: 45px;
+  padding-left: 25px;
+}
+
+#container {
+  margin: 0 auto;
+  padding-bottom: 30px;
+  width: 800px;
+}
+
+#features {
+  padding-top: 20px;
+}
+
+#features ul {
+  padding-top: 30px;
+}
+
+#features ul li {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+#development_plan {
+  margin-top: 20px;
+}
+
+.stage {
+  margin: 10px 0px;
+}
+
+.stage_name {
+  color: #333333;
+  font-size: 1.1em;
+  font-weight: bold;
+}
