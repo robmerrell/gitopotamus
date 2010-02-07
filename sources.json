@@ -1,5 +1,9 @@
 [
+    {"source": "app/models/git_hub_base.js"},
+    {"source": "app/models/user.js"},
+    {"source": "app/assistants/stage-assistant.js"},
     {
-        "source": "app/assistants/stage-assistant.js"
+        "scenes": "login",
+        "source": "app/assistants/login-assistant.js"
     }
 ]
