@@ -6,6 +6,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>Gitopotamus</title>
 	<link rel="stylesheet" href="css/gitopotamus.css" type="text/css" />
+	
+	<script type="text/javascript" src="javascripts/swfobject.js"></script>
 </head>
 
 <body>
@@ -41,12 +43,36 @@
         <div class="stage_name">Stage 1</div>
         <img src="images/mockups/login.png" style="float: left; padding-right: 20px;" />
         <div class="description">
-          <p>The very first scene of the application is for logging in.  GitHub doesn't allow you to use a username/password
+          <p>The very first scene of the application is the login scene.  GitHub doesn't allow you to use a username/password
             combination when using the API, you use an API token instead.</p>
           <p>We only show this scene if we don't have any login credentials stored or if the stored credentials
-            aren't authentication correctly.</p>
+            aren't authenticated correctly.</p>
+          <p style="font-weight: bold; margin-top: 50px;">In this screencast we cover:</p>
+          <ul style="list-style-position: inside; font-weight: bold;">
+            <li>Application setup</li>
+            <li>Scenes</li>
+            <li>Cookie stores</li>
+            <li>Ajax requests</li>
+          </ul>
         </div>
       </div>
+      <div class="movie">
+       <div id='mediaspace'>Please install Flash to view this movie</div>
+
+       <script type='text/javascript'>
+         var so = new SWFObject('player.swf','mpl','853','480','9');
+         so.addParam('allowfullscreen','true');
+         so.addParam('allowscriptaccess','always');
+         so.addParam('wmode','opaque');
+         so.addVariable('author','Rob Merrell');
+         so.addVariable('description','Gitopotamus Screencast');
+         so.addVariable('file','gitopotamus_screencast_1.mp4');
+         so.addVariable('title','Gitopotamus');
+         so.addVariable('streamer','rtmp://s1ps1jb37ufd4y.cloudfront.net/cfx/st');
+         so.write('mediaspace');
+       </script>
+      </div>
+      <a href="http://dhy8mvm49xwyo.cloudfront.net/gitopotamus_screencast_1.mp4">Download this screencast</a>
       <div class="spacer"></div>
       
       <div class="stage">

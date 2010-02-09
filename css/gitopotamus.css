@@ -34,7 +34,7 @@ p {
 #container {
   margin: 0 auto;
   padding-bottom: 30px;
-  width: 800px;
+  width: 900px;
 }
 
 #features {
@@ -72,4 +72,9 @@ p {
   clear: both;
   height: 10px;
   margin-bottom: 25px;
+}
+
+.movie { 
+  clear: both;
+  padding-top: 10px;
 }
