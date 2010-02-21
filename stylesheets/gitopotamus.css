@@ -1,1 +1,54 @@
 /* Put Application specific CSS here. */
+body.palm-default {
+  background: url(../images/background.png) center center;
+}
+
+.clear {
+  clear: both;
+}
+
+#button_bar {
+  padding-top: 20px;
+}
+
+.button_container {
+  float: left;
+  padding: 0px 7px 0px 7px;
+}
+
+#starred_badge {
+  background: url(../images/badge.png) no-repeat;
+  color: #ffffff;
+  font-size: 16px;
+  left: 50px;
+  top: 5px;
+  position: absolute;
+  text-align: center;
+  
+  width: 37px;
+  height: 38px;
+  line-height: 38px;
+}
+
+#explore_header {
+  color: #a4b6b0;
+  font-family: arial;
+  font-size: 50px;
+  padding-left: 10px;
+}
+
+#explore_repo {
+  margin: 10px 0px 0px 10px;
+}
+
+  #explore_repo p {
+    color: #008040;
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+#explore_repo_description {
+  padding: 0px 10px 0px 10px;
+}

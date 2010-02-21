@@ -2,5 +2,5 @@ function StageAssistant() {
 }
 
 StageAssistant.prototype.setup = function() {
-  this.controller.pushScene("repository-list");
+  this.controller.pushScene("home");
 }

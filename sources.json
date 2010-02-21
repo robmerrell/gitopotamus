@@ -10,5 +10,9 @@
     {
         "scenes": "repository-list",
         "source": "app/assistants/repository-list-assistant.js"
+    },
+    {
+        "scenes": "home",
+        "source": "app/assistants/home-assistant.js"
     }
 ]
