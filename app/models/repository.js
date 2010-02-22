@@ -20,6 +20,24 @@ var Repository = Class.create(GitHubBase, {
     Mojo.Log.info("call made");
     
     new Ajax.Request(url, request_settings);
+  },
+  
+  
+  /**
+   * Using a random keyword return a random result from a search
+   */
+  random_repo: function(callbacks) {
+    var url = this.create_url("repos/search/#{keyword}", {keyword: "mongodb"});
+    
+    error_message = "We weren't able to contact the GitHub servers.  Please try again later."
+    var request_settings = {
+      method: "get",
+      onFailure: function(transport) { Mojo.Controller.errorDialog(error_message); },
+      onException: function(transport) { Mojo.Controller.errorDialog(error_message); }
+    };
+    Object.extend(request_settings, callbacks);
+    
+    new Ajax.Request(url, request_settings);
   }
 
 });

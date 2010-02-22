@@ -10,9 +10,24 @@ HomeAssistant.prototype.setup = function() {
   Mojo.Event.listen(this.controller.get("my_repos_button"), Mojo.Event.tap, function(){ Mojo.Controller.errorDialog("my repos"); });  
   Mojo.Event.listen(this.controller.get("watched_button"), Mojo.Event.tap, function(){ Mojo.Controller.errorDialog("watched"); });
   Mojo.Event.listen(this.controller.get("search_button"), Mojo.Event.tap, function(){ Mojo.Controller.errorDialog("search"); });
-
+  
+  // load a random repo and show it in the "Exploration" section
+  repo = new Repository();
+  repo.random_repo({
+    onSuccess: this.on_explore_success.bind(this)
+  });
 }
 
-HomeAssistant.prototype.handleButtonPress = function() {
-  Mojo.Controller.errorDialog("success.");
+HomeAssistant.prototype.on_explore_success = function(transport) {
+  var response = transport.responseJSON;
+  
+  var repo = response.repositories[0];
+  
+  // get the name, last push and description of the repo
+  var partial = Mojo.View.render({
+    object: {name: repo.name, last_push: repo.pushed, description: repo.description},
+    template: "home/explore"
+  });
+  
+  $("explore").update(partial);
 }
