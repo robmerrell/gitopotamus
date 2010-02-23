@@ -52,3 +52,7 @@ body.palm-default {
 #explore_repo_description {
   padding: 0px 10px 0px 10px;
 }
+
+#exploreSpinner {
+  margin: 50px auto;
+}

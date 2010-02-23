@@ -27,7 +27,11 @@ var Repository = Class.create(GitHubBase, {
    * Using a random keyword return a random result from a search
    */
   random_repo: function(callbacks) {
-    var url = this.create_url("repos/search/#{keyword}", {keyword: "mongodb"});
+    // pull a random keyword to search by from our list
+    var keyword_list = ["mongodb", "ruby", "rails", "couchdb", "jquery", "webos", "sdl", "opengl"];
+    var keyword_index = Math.floor(Math.random() * keyword_list.length);
+    
+    var url = this.create_url("repos/search/#{keyword}", {keyword: keyword_list[keyword_index]});
     
     error_message = "We weren't able to contact the GitHub servers.  Please try again later."
     var request_settings = {
