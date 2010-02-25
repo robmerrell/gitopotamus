@@ -10,7 +10,7 @@
 #button_bar {
   background-color: #303030;
   border-bottom: 3px solid #afafaf;
-  padding: 20px 0px 10px 0px;
+  padding: 15px 0px 5px 0px;
 }
 
 .button_container {
@@ -35,7 +35,7 @@
 #explore_header {
   color: #a4b6b0;
   font-family: arial;
-  font-size: 50px;
+  font-size: 40px;
   padding-left: 10px;
 }
 
