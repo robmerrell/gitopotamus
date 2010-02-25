@@ -24,7 +24,9 @@ HomeAssistant.prototype.setup = function() {
   repo.random_repo({
     onSuccess: this.on_explore_success.bind(this),
     onComplete: this.on_explore_complete.bind(this),
-    onLoading: this.on_explore_loading.bind(this)
+    onLoading: this.on_explore_loading.bind(this),
+    onFailure: this.on_explore_fail.bind(this),
+    onException: this.on_explore_fail.bind(this)
   });
 }
 
@@ -35,7 +37,9 @@ HomeAssistant.prototype.handleCommand = function(event) {
       repo.random_repo({
         onSuccess: this.on_explore_success.bind(this),
         onComplete: this.on_explore_complete.bind(this),
-        onLoading: this.on_explore_loading.bind(this)
+        onLoading: this.on_explore_loading.bind(this),
+        onFailure: this.on_explore_fail.bind(this),
+        onException: this.on_explore_fail.bind(this)
       });
     }
   }
@@ -70,4 +74,8 @@ HomeAssistant.prototype.on_explore_loading = function(transport) {
     
   this.models.exploreSpinner.spinning = true;
   this.controller.modelChanged(this.models.exploreSpinner);
+}
+
+HomeAssistant.prototype.on_explore_fail = function(transport) {
+  $("explore").update("The GitHub API encountered an error.  Refresh to try again.");
 }

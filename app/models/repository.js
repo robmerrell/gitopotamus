@@ -35,9 +35,7 @@ var Repository = Class.create(GitHubBase, {
     
     error_message = "We weren't able to contact the GitHub servers.  Please try again later."
     var request_settings = {
-      method: "get",
-      onFailure: function(transport) { Mojo.Controller.errorDialog(error_message); },
-      onException: function(transport) { Mojo.Controller.errorDialog(error_message); }
+      method: "get"
     };
     Object.extend(request_settings, callbacks);
     
