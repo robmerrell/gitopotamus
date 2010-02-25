@@ -42,6 +42,25 @@ var Repository = Class.create(GitHubBase, {
     Object.extend(request_settings, callbacks);
     
     new Ajax.Request(url, request_settings);
+  },
+  
+  
+  /**
+   * Convert the GitHub last pushed date to a more friendly format
+   */
+  friendly_last_pushed_date: function(pushed) {
+    // extract the date contents from the ISO8601 format
+    var date_string = pushed.split('T')[0];
+    var date_sections = date_string.split('-');
+
+    var date = new Date();
+
+    // apply the extracted date formats to our date object
+    date.setUTCFullYear(Number(date_sections[0]));
+    date.setUTCMonth(Number(date_sections[1])-1);
+    date.setUTCDate(Number(date_sections[2]));
+
+    return Mojo.Format.formatDate(date, {date: "medium"});
   }
 
 });

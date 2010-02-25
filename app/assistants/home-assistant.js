@@ -48,9 +48,12 @@ HomeAssistant.prototype.on_explore_success = function(transport) {
   var repo_index = Math.floor(Math.random()  * response.repositories.length);
   var repo = response.repositories[repo_index];
   
+  repo_model = new Repository();
+  var pushed_date = repo_model.friendly_last_pushed_date(repo.pushed);
+  
   // get the username, name, last push and description of the repo and apply it to the home/explore partial
   var partial = Mojo.View.render({
-    object: {username: repo.username, name: repo.name, last_push: repo.pushed, description: repo.description},
+    object: {username: repo.username, name: repo.name, last_push: pushed_date, description: repo.description},
     template: "home/explore"
   });
   
