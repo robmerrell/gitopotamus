@@ -1,14 +1,16 @@
 /* Put Application specific CSS here. */
-body.palm-default {
+/*body.palm-default {
   background: url(../images/background.png) center center;
 }
-
+*/
 .clear {
   clear: both;
 }
 
 #button_bar {
-  padding-top: 20px;
+  background-color: #303030;
+  border-bottom: 3px solid #afafaf;
+  padding: 20px 0px 10px 0px;
 }
 
 .button_container {
