@@ -30,8 +30,7 @@ LoginAssistant.prototype.login = function() {
     cred_store.put(new_creds);
     
     // make the ajax request to validate the credentials
-    user = new User();
-    user.validate_request({
+    UserHelper.get_info(this.models.txtUsername.value, {
       onComplete: this.on_request_complete.bind(this),
       onSuccess: this.on_request_success.bind(this)
     });

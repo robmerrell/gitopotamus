@@ -1,6 +1,6 @@
 [
-    {"source": "app/models/git_hub_base.js"},
-    {"source": "app/models/user.js"},
+    {"source": "app/helpers/github.js"},
+    {"source": "app/helpers/user.js"},
     {"source": "app/assistants/stage-assistant.js"},
     {
         "scenes": "login",
